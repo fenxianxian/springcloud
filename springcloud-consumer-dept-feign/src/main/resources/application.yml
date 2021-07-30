@@ -1,0 +1,13 @@
+server:
+  port: 81
+
+feign:
+  hystrix:
+    enabled: true
+
+#告诉消费方别直接去找提供方，要先去eureka找
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
